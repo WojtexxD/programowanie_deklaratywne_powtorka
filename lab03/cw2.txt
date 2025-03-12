@@ -1,0 +1,57 @@
+T1: f(X,a(b,c))		T2: f(Z,a(Z,c))
+Z=b
+f(X,a(b,c)) i f(b,a(b,c))
+X=b
+f(b,a(b,c)) i f(b,a(b,c))
+można zrobić unifikacje
+
+
+
+
+T1: fu(a,X,f(g(Y)))	T2: fu(Y,f(Z),f(Z))
+Z=g(Y)
+fu(a,X,f(g(Y))) i fu(Y,f(g(Y)),f(g(Y)))
+X=f(g(Y))
+fu(a,f(g(Y)),f(g(Y))) i fu(Y,f(g(Y)),f(g(Y)))
+Y=a
+fu(a,f(g(a)),f(g(a))) i fu(a,f(g(a)),f(g(a)))
+można zrobić unifikacje
+
+
+
+
+T1: fu(f(X),Y,a)	T2: fu(f(g(Y)),c,Z)
+Z=a, Y=c
+fu(f(X),c,a) i fu(f(g(c)),c,a)
+X=g(c)
+fu(f(g(c)),c,a) i fu(f(g(c)),c,a)
+można zrobić unifikacje
+
+
+
+
+T1: f(X,X)	T2: f(a,b)
+X=a, X=b nie można zrobić unifikacjii ponieważ X jest równe a i b jednocześnie
+
+
+
+
+T1: fu(a,X,f(g(Y)))		T2: f(V,h(Z,V),f(V))
+V=g(Y), X=h(Z,V), V=a
+nie można zrobic unifikacjii ponieważ V jest równe g(Y) i a jednocześnie
+
+
+
+
+T1: para(X,Y)		T2: para(jacek,ewa)
+X=jacek, Y=ewa
+para(jacek,ewa) i para(jacek,ewa)
+można zrobić unifikacje
+
+
+
+
+T1: jedzie(student,rower)		T2: jedzie(student,X)
+X=rower
+jedzie(student,rower) i jedzie(student,rower)
+można zrobić unifikacje
