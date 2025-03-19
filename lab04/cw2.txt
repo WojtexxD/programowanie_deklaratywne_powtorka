@@ -1,0 +1,13 @@
+			dziadek(X,piotr)
+			//k5		\\k6
+	k5:dziadek(karol,marek).	k6:dziadek(X1,Y1):-ojciec(X1,Z1),dziecko(Y1,Z1).
+	sigma:X=karol			sigma: X1=X, Y1=piotr
+	piotr\=marek			ojciec(X,Z1),dziecko(piotr,Z1).
+					//k1				\\k2
+			k1:ojciec(karol,jan).				k2:ojciec(karol,adam).
+			sigma:X=karol, Z1=jan				sigma:X=karol, Z1=adam
+			dziecko(piotr,jan).				dziecko(piotr,adam).
+			//k3		\\k4				//k3			\\k4
+	k3:dziecko(tomasz,jan).		k4:dziecko(piotr,adam).		k3:dziecko(tomasz,jan).	k4:dziecko(piotr,adam).
+	piotr\=tomasz			jan\=adam			piotr\=tomasz		piotr=piotr, adam=adam
+												X=karol
