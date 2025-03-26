@@ -1,0 +1,12 @@
+przodek(X,ania).
+
+rodzic(ewa, ania).		przodek(X1,Y1):-rodzic(X1,Z1),rodzic(Z1,Y1).
+X=ewa				X1=X, Y1=ania
+odp. X=ewa			rodzic(X,Z1), rodzic(Z1,ania).
+
+			rodzic(ewa,ania).				rodzic(piotr, ewa).
+			X=ewa, Z1=ania					X=piotr, Z1=ewa
+			rodzic(ania,ania).				rodzic(ewa,ania).
+		dziecko(ewa, ania).	dziecko(piotr, ewa).	dziecko(ewa,ania).	dziecko(piotr, ewa).
+		ewa\=ania		piotr\=ania		odp. X=piotr		piotr\=ewa
+					ewa\=ania					ewa\=ania
