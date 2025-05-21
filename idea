@@ -4,4 +4,5 @@ program dla dermatologów
 -baza danych chorób skóry wraz z ich opisami
 -wyliczanie prawdopodobieństwa(lub czy to jest choroba skóry) choroby skóry na podstawie wielkości(średnica, promień) koloru i czasu jak długo to znamie jest na naszym ciele
 -czy masz możliwość na zabieg(podajesz odpowiedzi i mowi na jakie zabiegi masz mozliwosc lub wybierasz zabieg odpowiadasz i wyskakuje czy możesz wykonać ten zabieg)
--lista zabiegów
+-lista możliwych zabiegów(z opisami)
+-lista zapisów na zabieg
